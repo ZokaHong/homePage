@@ -1,42 +1,6 @@
-.game-type {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
-.game-type:hover {
-  scale: 1;
-}
-
-#MMORPG {
-  background-image: url(../public/mapleStory.jpg);
-}
-
-#RPG {
-  background-image: url(../public/ghost.jpg);
-}
-
-#FPS {
-  background-image: url(../public/csgo.png);
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-html.sr .load-hidden {
-  visibility: hidden;
+.container {
+  background-color: #edede9;
+  min-height: 600px;
 }
 
 .carousel .carousel-control {
@@ -47,25 +11,25 @@ html.sr .load-hidden {
   opacity: 1;
 }
 
-.carousel-control-icon {
-  scale: 2;
+.carousel .carousel-indicators {
+  opacity: 0;
 }
 
-#MMORPGTitle {
-  font-size: 50px;
-  color: #0496ff;
-  -webkit-text-stroke: 6px #0496ff;
+.carousel:hover .carousel-indicators {
+  opacity: 1;
 }
-#RPGTitle {
-  font-size: 50px;
-  color: #f6aa1c;
-  -webkit-text-stroke: 6px #f6aa1c;
+
+a {
+  text-decoration: none;
 }
-#FPSTitle {
-  font-size: 50px;
-  color: #ef233c;
-  -webkit-text-stroke: 6px #ef233c;
+#category{
+  color: #e85d04;
 }
+
+#gameTitleIcon {
+  width: 50%;
+}
+
 .carousel-item{
   width: 100%;
   height: 500px;
@@ -81,7 +45,4 @@ html.sr .load-hidden {
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-#pages{
-  margin: 50px;
 }

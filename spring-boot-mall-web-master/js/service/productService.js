@@ -71,6 +71,16 @@ function deleteFromCart() {
   else console.log(cart.splice(productId, 1))
 }
 
+$('.items').mouseover(function () {
+  $(this).css('backgroundColor', '#81c3d7');
+});
+$('.items').mouseout(function () {
+  $(this).css('backgroundColor', '#edede9');
+});
+
+
+
+
 // function createOrder() {
 //   let buyItemList = []
 //   cart.map((cartItem, index) => {
