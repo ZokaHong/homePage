@@ -16,3 +16,42 @@ body {
   background-size: cover;
   background-image: url(../public/auth-bg.jpg);
 }
+
+.container {
+  min-height: 500px;
+  position: relative;
+}
+
+.nav-link {
+  padding: 20px;
+}
+
+.nav-link {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-group {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: #ff9f1c;
+  color: black;
+}
+
+.text-center {
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 1rem);
+}
+
+.btn-bottom {
+  font-size: 24px;
+  font-weight: bold;
+  width: 75%;
+  position: relative;
+  right: 0.5rem;
+}
