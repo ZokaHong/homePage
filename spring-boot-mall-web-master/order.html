@@ -12,12 +12,18 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/loadingSpinner.css" />
 
     <script src="./js/includeHTML.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   </head>
   <body>
     <div w3-include-html="./component/navbar.html"></div>
+
+    <!-- 讀取圖示 -->
+    <div id="loadingSpinner" class="pt-5">
+      <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- 讀取圖示 -->
 
     <main class="ms-sm-auto col-lg-12 px-md-4 p-5" style="min-height: 80vh">
       <div class="table-responsive">
@@ -35,10 +41,11 @@
               <th scope="col">狀態</th>
               <th scope="col">交易日期</th>
               <th scope="col">建立日期</th>
-              <th scope="col">詳細資訊</th>
+              <th scope="col">細節</th>
             </tr>
           </thead>
-          <tbody id="tBody"></tbody>
+
+          <tbody></tbody>
         </table>
       </div>
     </main>
@@ -47,73 +54,6 @@
 
     <script>
       includeHTML()
-    </script>
-
-    <script>
-      var data = [
-        {
-          orderId: 1,
-          uuid: 1,
-          amount: 100,
-          paymentStatus: 'PAID',
-          paymentDate: '2023-02-21',
-          createdDate: '2023-02-21',
-        },
-        {
-          orderId: 2,
-          uuid: 2,
-          amount: 200,
-          paymentStatus: 'PAID',
-          paymentDate: '2023-02-21',
-          createdDate: '2023-02-21',
-        },
-        {
-          orderId: 3,
-          uuid: 3,
-          amount: 300,
-          paymentStatus: 'PAID',
-          paymentDate: '2023-02-21',
-          createdDate: '2023-02-21',
-        },
-        {
-          orderId: 4,
-          uuid: 4,
-          amount: 400,
-          paymentStatus: 'PAID',
-          paymentDate: '2023-02-21',
-          createdDate: '2023-02-21',
-        },
-      ]
-
-      document.ready(renderTable())
-
-      function renderTable() {
-        const tableBody = document.querySelector('#tBody')
-        tableBody.innerHTML = ''
-        data.forEach((order, index) => {
-          const tr = document.createElement('tr')
-          tr.innerHTML = `
-          <td>${index + 1}</td>
-          <td>${order.uuid}</td>
-          <td>${order.amount}</td>
-          <td>${order.paymentStatus}</td>
-          <td>${order.paymentDate}</td>
-          <td>${order.createdDate}</td>
-          <td><button "
-            class="btn btn-primary" type="button"
-            data-bs-toggle="collapse" data-bs-target="#orderItem${
-              order.orderId
-            }"
-            aria-expanded="false" aria-controls="orderItem${order.orderId}">${
-            order.orderId
-          }</button></td>
-          `
-          tableBody.appendChild(tr)
-          tableBody.append(
-            `<div class="collapse" id="orderItem${order.orderId}">123</div>`
-          )
-        })
-      }
     </script>
 
     <!-- JavaScript Bundle with Popper -->

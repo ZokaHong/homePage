@@ -3,7 +3,6 @@ const serverUrl = 'https://spring-boot-mall-api-production.up.railway.app'
 $(document)
   .ready(function () {
     checkAccessToken()
-    $('#loadingSpinner').hide()
   })
   .ajaxStart(function () {
     $('#loadingSpinner').show()
@@ -97,4 +96,17 @@ function forgetPassword() {
       showToast('使用者資料填寫有誤或信箱未註冊')
     },
   })
+}
+
+function googleLogin() {
+  window.location.href = `${serverUrl}/redirectToGoogle`
+}
+
+function memberLogin(){
+  $('#loginEmail').val('iammember@gamehub '),
+  $('#loginPassword').val('gamehub')
+}
+function adminLogin(){
+  $('#loginEmail').val('iamadmin@gamehub'),
+  $('#loginPassword').val('gamehub')
 }
