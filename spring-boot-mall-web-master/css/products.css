@@ -1,7 +1,7 @@
 .game-type {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
 }
 
@@ -84,6 +84,9 @@ html.sr .load-hidden {
 @media (max-width: 768px) {
   .carousel-item {
     height: 250px;
+  }
+  #MMORPG, #RPG,#FPS {
+    background-image: url(../public/RWD.png);
   }
 }
 .carousel-img {
